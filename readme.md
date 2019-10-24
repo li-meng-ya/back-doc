@@ -4,3 +4,10 @@
 
 # 注意:
 一个相关技术放到一个目录下面。
+
+# 使用说明
+1. [先安装插件](https://mp.csdn.net/postedit/102647500)
+2. 创建md文件。
+3. 写内容。
+4. 执行mvn install生成目录结构
+5. push到github上。
