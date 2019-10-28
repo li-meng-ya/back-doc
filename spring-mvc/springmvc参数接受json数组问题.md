@@ -5,6 +5,15 @@
 1. 加注释
 2. 用List+map。
 3. 用字符串转jsonArray。
+# 代码
+```
+@RequestMapping(value = "/pushPart",method = RequestMethod.POST)
+    public String pushPart(@RequestParam("numbers") String numbers, @RequestParam(value = "num",required = false) @RequestBody  String num)  {
+        JSONArray jsonArray = JSONArray.parseArray(num);//将字符串解析成数组
+        JSONObject jSONObject = jsonArray.getJSONObject(0);//获取object对象
+        Log log = LogFactory.get();
+        log.debug("{}" , jSONObject);
+```
 # 参考资料
 - [SpringMVC利用json接收复杂对象和数组](https://blog.csdn.net/qq_42131246/article/details/83105221)
 > SpringMVC接收复杂参数必须要在参数前加@RequestBody
