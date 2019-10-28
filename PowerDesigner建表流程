@@ -1,0 +1,119 @@
+**1.PowerDesigner建表准备**
+
+    1.1.工具：PowerDesign12.5
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfdec1c3dc168a?w=1004&h=748&f=png&s=208855)
+    1.2.PD命令编辑：
+    
+      1.2.1.PD命令：
+      第一次使用PD，需手动编辑相关的PD命令，每次建表后手动运行检查建表规范及注释添加
+      1.2.2.准备文件：
+      D:\workspace\corsview\cv\doc\pd\codediff.vbs
+      D:\workspace\corsview\cv\doc\pd\name2comment.vbs
+      
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfdf3403eca38a?w=1258&h=623&f=png&s=377774)
+    依次Tools-Execute Commands-Customize Commands
+        
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfdf3ec4d5cce5?w=1253&h=612&f=png&s=231504)
+    自定义Name（如图）,Type选择VB Script,Command Line导入命令文件（图中为codediff.vbs文件及name2comment.vbs文件）
+    
+    注：checked命令主要用于校验公共域定义的引用是否匹配（每次建表结束后需手动运行）
+        Name2comment命令主要用于给表中字段加入注释（每次建表结束后需手动运行）
+
+1.3.公共域定义管理
+
+      1.3.1.公共域定义
+      公共域主要用于给数据表中的所有字段增加公共定义，便于统一管理，一般建表前，需查看 公共域，若有可复用字段可直接引用，若无，则手动新增
+    
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfdf71c01e5105?w=1260&h=1136&f=png&s=554263)
+      在左边目录栏找到公共域定义，选中Domains
+    
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfdf9563a0063f?w=1178&h=898&f=png&s=216112)
+右键new,弹出如图框体,Name输入字段中文名,code输入字段名,Data type选择字段类型,length输入字段长度
+
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfdfae6a8655fc?w=1188&h=904&f=png&s=278980)
+若为枚举类型，则需在Comment内输入枚举内容（如图）,Data type选择INTEGER
+
+  1.4.切换数据库
+  
+  注：该操作须选定模块后进行
+  
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfdfd1f5274127?w=1235&h=807&f=png&s=725479)
+依次Database-Change Current DBMS
+
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfdfd904b98667?w=907&h=813&f=png&s=229740)
+弹出框体上方是更改为对应数据库类型,下方为现使用数据库类型
+
+**2.建表流程**
+
+2.1.选择模块
+
+从左侧目录选择对应模块，若无，则需新建模块
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfdfefdd344b8f?w=1266&h=1130&f=png&s=678713)
+选中Workspace,依次New-Physical Data Model
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfdff59b70e700?w=1257&h=672&f=png&s=165829)
+在弹出的框体内输入模块名（图中为样例）,DBMS开发默认选择MySQL5.0
+
+注：新建完成后讲Physical Diagram更名为对应模块名
+
+2.2.新建数据表
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe00524665682?w=1260&h=953&f=png&s=535668)
+在工具栏选中Table工具，并在空白处单击
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe00a89860c15?w=950&h=470&f=png&s=45017)
+新增Table成功
+
+2.3.编辑数据表
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe015bc805b21?w=1211&h=1051&f=png&s=365648)
+双击打开编辑框体,Name输入表中文名,Code输入表名
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe01da70a1c8f?w=1204&h=1052&f=png&s=577712)
+将Table页切换到Columns分页,单击图中黑框处,双击黑色箭头处进行编辑
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe024d2aa8aea?w=1205&h=1084&f=png&s=401993)
+在弹出的框体内Name输入中文字段名,Code输入字段名,在箭头处导入公共域定义
+
+注：公共域定义模块需打开（即处于打开状态）
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe02cf17be2c2?w=923&h=894&f=png&s=320511)
+在展开的公共域定义中找到字段对应的公共定义
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe031a0c03293?w=926&h=891&f=png&s=387740)
+若条目过多,则切换到Index选项卡,输入关键字查询
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe036071188cd?w=1206&h=1082&f=png&s=502641)
+完成后的字段
+
+
+ **3.建表完成后流程**
+ 
+ 3.1.执行PD命令
+ 
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe048e713a776?w=1270&h=711&f=png&s=563280)
+字段全部编辑完成后，依次Tools-Execute Commands-Checked/name2comment执行无误后保存并提交
+
+3.2.完善数据字典
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe05549ad9f1d?w=1258&h=888&f=png&s=749816)
+在workspace\corsview\cv\doc下找到数据字典并打开
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe059b46068bc?w=1257&h=434&f=png&s=94272)
+根据对应的模块选择对应的表单
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe05dfcf181af?w=1268&h=200&f=png&s=81369)
+将新增的公共域定义按指定格式写入数据字典并保存
+
+3.3.导出建表语句
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe0669378e654?w=912&h=812&f=png&s=248715)
+
+首先确定好所选定的数据库（图中为DB2, 具体数据库切换详见1.4)
+
+![](https://user-gold-cdn.xitu.io/2019/10/24/16dfe073262307b0?w=1213&h=1057&f=png&s=551105)
+选好数据库后,双击新建的table,选中Preview分页,直接复制到对应数据库中执行即可
+　
