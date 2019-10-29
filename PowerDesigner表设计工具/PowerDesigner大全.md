@@ -1,43 +1,60 @@
+# Table of Contents
+
+* [操作步骤](#操作步骤)
+  * [Powerdesigner 常用配置](#powerdesigner-常用配置)
+  * [PowerDesigner 常用配置修改](#powerdesigner-常用配置修改)
+  * [PowerDesigner 15设置mysql主键自动增长及基数](#powerdesigner-15设置mysql主键自动增长及基数)
+  * [PowerDesigner 生成sql没有注释](#powerdesigner-生成sql没有注释)
+  * [怎么使用Powerdesigner 自动布局](#怎么使用powerdesigner-自动布局)
+  * [Power designer设置线条线为直线](#power-designer设置线条线为直线)
+  * [PowerDesigner sql文件逆向工程](#powerdesigner-sql文件逆向工程)
+  * [PowerDesigner如何设置字符编码？](#powerdesigner如何设置字符编码)
+  * [Powerdesigner12.5 设置表字符集和存储引擎](#powerdesigner125-设置表字符集和存储引擎)
+  * [PowerDesigner搜索字段 Ctrl+F](#powerdesigner搜索字段-ctrlf)
+  * [Powerdesigner常用配置-修改外键设置](#powerdesigner常用配置-修改外键设置)
+  * [PowerDesigner怎么在包中引用别的包中的表](#powerdesigner怎么在包中引用别的包中的表)
+
+
 # 操作步骤
-- Powerdesigner 常用配置
+## Powerdesigner 常用配置
 
    [常用配置](https://blog.csdn.net/kanglong129/article/category/9330712)
 
-- PowerDesigner 常用配置修改
+## PowerDesigner 常用配置修改
 
    [常用配置修改](https://www.cnblogs.com/biyusoft/p/3351471.html)
 
-- PowerDesigner 15设置mysql主键自动增长及基数
+## PowerDesigner 15设置mysql主键自动增长及基数
 
    [设置mysql主键自动增长及基数](https://blog.csdn.net/iguiyi/article/details/51899126)
 
-- PowerDesigner 生成sql没有注释
+## PowerDesigner 生成sql没有注释
 
    [生成sql没有注释](https://blog.csdn.net/u010734213/article/details/82774862)
 
-- 怎么使用Powerdesigner 自动布局 
+## 怎么使用Powerdesigner 自动布局 
 
    [自动布局](https://zhidao.baidu.com/question/498087929.html)
 
-- Power designer设置线条线为直线
+## Power designer设置线条线为直线
 
    [设置线条线为直线](https://jingyan.baidu.com/article/2a13832884929b074a134f0e.html)
 
-- PowerDesigner sql文件逆向工程 
+## PowerDesigner sql文件逆向工程 
 
    [sql文件逆向工程](https://blog.csdn.net/qq_41720208/article/details/102606185)
 
-- PowerDesigner如何设置字符编码？ 
+## PowerDesigner如何设置字符编码？ 
 
    [如何设置字符编码](https://jingyan.baidu.com/article/7c6fb428d4c89080642c90aa.html)
 
-- Powerdesigner12.5 设置表字符集和存储引擎 
+## Powerdesigner12.5 设置表字符集和存储引擎 
 
    [设置表字符集和存储引擎](http://www.360doc.com/content/10/0819/13/15103_47179467.shtml)
 
-- PowerDesigner搜索字段 Ctrl+F
+## PowerDesigner搜索字段 Ctrl+F
 
-- Powerdesigner常用配置-修改外键设置
+## Powerdesigner常用配置-修改外键设置
 
   1 取消自动生成外键列
   
@@ -45,7 +62,7 @@
   
   2 PowerDesigner给两个表添加reference，中间显示外键信息步骤
 
-- PowerDesigner怎么在包中引用别的包中的表
+## PowerDesigner怎么在包中引用别的包中的表
 
 
   1 第一步，打开我们电脑中的PowerDesigner软件，进入软件主页面，如下图所示；

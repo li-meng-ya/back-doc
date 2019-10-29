@@ -1,3 +1,9 @@
+# Table of Contents
+
+* [IDEA设置成eplicse快捷键](#idea设置成eplicse快捷键)
+* [Idea 快捷生成方法](#idea-快捷生成方法)
+
+
 # IDEA设置成eplicse快捷键
 1. 执行(run) alt+r 
 2. 提示补全 (Class Name Completion) alt+/ 
