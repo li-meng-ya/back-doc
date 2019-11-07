@@ -1,5 +1,7 @@
 # 使用MyBatis插件过程中遇到的问题
 
+[Mybatis的generator生成WithBLOBS.java文件原因及解决](https://blog.csdn.net/qq_34982426/article/details/83180450
+)
 * [现象](#现象)
 * [解决过程](#解决过程)
 
